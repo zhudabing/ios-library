@@ -8,7 +8,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 /**
- * Base class for UIWebView & WKWebView native bridges that automatically inject the 
+ * Base class for WKWebView native bridges that automatically inject the
  * Urban Airship Javascript interface on whitelisted URLs.
  */
 @interface UABaseNativeBridge()
@@ -20,7 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  * Populate Javascript environment if the webView is showing a whitelisted URL.
  *
- * @param webView The UIWebView or WKWebView.
+ * @param webView The  WKWebView.
  */
 - (void)populateJavascriptEnvironmentIfWhitelisted:(UIView *)webView requestURL:(NSURL *)url;
 
@@ -28,7 +28,7 @@ NS_ASSUME_NONNULL_BEGIN
  * Call the appropriate Javascript delegate with the call data and evaluate the returned Javascript.
  *
  * @param data The object holding the data associated with JS delegate calls .
- * @param webView The UIWebView or WKWebView.
+ * @param webView The WKWebView.
  */
 - (void)performJSDelegateWithData:(UAWebViewCallData *)data webView:(UIView *)webView;
 
